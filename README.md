@@ -1,17 +1,13 @@
 # CQRS
 My own implementation of CQRS/Mediator pattern
 
-========================
 ----- CREATE QUERY -----
-========================
 
     public class GetDataQuery : IAsyncQuery<string>
     {
     }
 
-==========================
 ----- CREATE HANDLER -----
-==========================
 
     public class GetDataQueryHandler : IHandleQueryAsync<GetDataQuery, string>
     {
@@ -22,9 +18,7 @@ My own implementation of CQRS/Mediator pattern
         }
     }
 
-==========================================
 ----- AUTOFAC SETUP & EXAMPLE OF USE -----
-==========================================
 
     class Program
     {
