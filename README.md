@@ -30,16 +30,14 @@ My own implementation of CQRS/Mediator pattern
 
             var container = builder.Build();
 
-            var requestBus = container.Resolve<IRequestBus>();
+            var mediator = container.Resolve<IMediator>();
 
-            var task = requestBus.Send(new GetDataQuery());
+            var task = mediator.Send(new GetDataQuery());
 
             var result = task.Result;
 
             Console.WriteLine(result);
 
             Console.ReadLine();
-
-
         }
     }
